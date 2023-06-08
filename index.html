@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap');
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700');
+    </style>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+<!--Header principal-->
+<header class="principal">
+  <!--Barra de navegación-->
+    <div class="barra">
+        <div class="logo">
+            <img src="img/Sakura_Logo.png" height="60px">
+        </div>
+        <nav class="menu">
+            <a href="#inicio" class="recolor">INICIO</a>
+            <a href="#menu">MENÚ</a>
+            <a href="#reservaciones">RESERVACIONES</a>
+            <a href="#contacto">CONTACTO</a>
+        </nav>
+    </div>
+  <!--Carrusel de imagenes-->
+    <div class="panel" id="inicio">
+        <div class="deslizador">
+          <!--Botones-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--Diapostivas-->
+          <div class="imagenes primera">
+            <img src="img/Carrusel_1.jpg" alt="">
+          </div>
+          <div class="imagenes">
+            <img src="img/Carrusel_2.jpg" alt="">
+          </div>
+          <div class="imagenes">
+            <img src="img/Carrusel_3.jpg" alt="">
+          </div>
+          <div class="imagenes">
+            <img src="img/Carrusel_4.jpg" alt="">
+          </div>
+          <!--Navegación automatica-->
+          <div class="navegacion-automatica">
+            <div class="auto-boton1"></div>
+            <div class="auto-boton2"></div>
+            <div class="auto-boton3"></div>
+            <div class="auto-boton4"></div>
+          </div>
+        </div>
+        <!--Navegación manual-->
+        <div class="navegacion-manual">
+          <label for="radio1" class="manual-boton"></label>
+          <label for="radio2" class="manual-boton"></label>
+          <label for="radio3" class="manual-boton"></label>
+          <label for="radio4" class="manual-boton"></label>
+        </div>
+      </div>
+        <!--Script-->
+       <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+        }, 5000);
+        </script>
+  <!--Contenedor de elementos 1-->
+    <section class=contenedor1 id="nosotros">
+      <img src="img/Sakura_Logo.png" class="logo2">
+        <div class="subcontenedor1">
+            <div class="parrafo1">
+             <p>Fue fundado en 1792 por el famoso ingeniero y empresario Dino Toyoda Nishibayashi, a lo largo de estos más de dos siglos, el restaurante Sakura se ha convertido en uno de los restaurantes de comida japonesa tradicional mas importantes a nivel mundial, ademas de contar con una amplia variedad en comida gourmet. Tenemos el reconocimiento nacional, pues contamos con instalaciones a lo largo de todo el país, en 11 estados distintos como lo son: Chihuahua, Durango, Guanajuato, Cd. de México, Estado de Mexico, Baja California Norte, Baja California Sur, Queretaro, Nuevo Leon, Jalisco, Quintana Roo. Nuestro reconocimiento se debe a nuestra gran exigencia en cada uno de los aspectos de la comida, desde elegir los ingredientes con la mejor calidad del mercado y ademas contar con los mejores cocineros a nivel internacional en cada una de nuestras instalaciones.</p>
+            </div>
+        </div>
+    </section>
+  <!--Galeria de imagenes-->
+  <div class="contenedor-galeria">
+    <div class="img-box">
+      <a href="#">
+          <figure>
+              <img src="img/img1.jpg" alt="img-galeria">
+          </figure>
+      </a>
+    </div>
+    <div class="img-box">
+      <a href="#">
+          <figure>
+              <img src="img/img2.jpg" alt="img-galeria">
+          </figure>
+      </a>
+    </div>
+    <div class="img-box">
+      <a href="#">
+          <figure>
+              <img src="img/img3.jpg" alt="img-galeria">
+          </figure>
+      </a>
+    </div>
+  <div class="img-box">
+      <a href="#">
+          <figure>
+              <img src="img/img4.jpg" alt="img-galeria">
+          </figure>
+      </a>
+  </div>
+  <div class="img-box">
+      <a href="#">
+          <figure>
+              <img src="img/img5.jpg" alt="img-galeria">
+          </figure>
+      </a>
+  </div>
+  </div>
+  <!--Acceso al menú-->
+  <section class="contenedor2" id="menu">
+    <div class="subcontenedor2">
+      <div class="texto1">
+        <h2>NUESTRO MENÚ</h2>
+        <p>Da un vistazo a nuestro amplio catalogo de comida tradicional japonesa y otros extras</p>
+        <p>siempre con la mejor calidad para nuestros mejores clientes.</p>
+     </div>
+     <div class="flex">
+        <a href="#0" class="boton">VER MENÚ</a>
+      </div>
+    </div>
+    <div class="imagencont1">
+      <img src="img/img4.jpg" width="234.39px" height="230.05px">
+    </div>
+  </section>
+
+    <!--Reservaciones-->
+    <section class="contenedor3" id="reservaciones">
+      <div class="subcontenedor3">
+        <h2>RESERVACIONES</h2>
+        <p>Reservaciones solo por Open Table.</p>
+       <p>Llamanos al 123 345 1134.</p>
+      </div>
+      <div class="reservaciones">
+        <iframe src="https://www.opentable.com.mx/widget/reservation/canvas?rid=1024&amp;type=standard&amp;theme=standard&amp;overlay=false&amp;domain=commx&amp;lang=es-MX&amp;r3uid=AAHDFIyC2&amp;newtab=false&amp;disablega=false&amp;ot_source=Restaurant%20website&amp;color=1" width="224" height="301" frameborder="0" scrolling="no" name="opentable-make-reservation-widget" title="Reservaciones en línea | OpenTable, Sakura Cocina Tradicional Japonesa"></iframe>
+      </div>
+    </section>
+    <!--Previo al footer-->
+    <div class="footerprev">
+      <img src="img/bannerhomedescanso.jpg">
+    </div>
+    <!--Contacto-->
+    <footer class="footer" id="contacto">
+      <div class="contenedor4">
+
+        <div class="footer-row">
+
+          <div class="footer-links">
+            <h4>Más información</h4>
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#menu">Menú</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#reservaciones">Reservaciones</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Horarios</h4>
+            <p>Lunes 12:00 - 19:00</p>
+            <p>Martes 12:00 - 13:10</p>
+            <p>Miercoles 12:00 - 15:00</p>
+            <p>Jueves 12:00 - 13:10</p>
+            <p>Viernes 12:00 - 20:40</p>
+            <p>Sabado 12:00 - 19:00</p>
+          </div>
+          <div class="footer-links">
+            <h4>Dirección</h4>
+            <p>Calle Tilin #12, col. Ete Sech, Yuriria, GTO, México </p>
+            <h4>Telefono</h4>
+            <p>123 345 1134</p>
+          </div>
+          <div class="footer-links">
+            <h4>Siguenos</h4>
+            <div class="social-links">
+              <a href="https://es-la.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://mx.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+   </footer>
+</header>
+</body>
+</html>
